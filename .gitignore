@@ -1,0 +1,12 @@
+# Variáveis de ambiente e configurações locais
+.env
+.env.*
+!.env.example
+
+# Editores e sistema operacional
+.idea/
+.vscode/
+.DS_Store
+
+# Logs
+*.log
