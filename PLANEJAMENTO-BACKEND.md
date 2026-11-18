@@ -76,6 +76,8 @@ Usar `Clock` injetável para a regra temporal e testes determinísticos. A carta
 
 ## 4. Modelo e regras
 
+O catálogo atualizado está em [Regras de negócio](docs/REGRAS-DE-NEGOCIO.md), incluindo alteração validada do nome por `User.changeDisplayName`. Invariantes locais ficam nas entidades; Services futuros coordenam autenticação, repositories e transações.
+
 O MVP passa a ter duas entidades: `User` e `Capsule`. Um usuário possui muitas cápsulas; cada cápsula tem exatamente um proprietário.
 
 ### Usuário

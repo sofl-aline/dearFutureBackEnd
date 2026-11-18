@@ -1,0 +1,52 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide empty members
+title DearFuture — entidades do domínio
+class User <<Entity>> {
+  - id : UUID
+  - name : String
+  - email : String
+  - passwordHash : String
+  - createdAt : Instant
+  # User()
+  + User(id: UUID, name: String, email: String, passwordHash: String, createdAt: Instant)
+  + changeDisplayName(name: String) : void
+  + getId() : UUID
+  + getName() : String
+  + getEmail() : String
+  + getPasswordHash() : String
+  + getCreatedAt() : Instant
+}
+class Capsule <<Entity>> {
+  - id : UUID
+  - owner : User
+  - title : String
+  - message : String
+  - createdAt : Instant
+  - opensAt : Instant
+  # Capsule()
+  + Capsule(id: UUID, owner: User, title: String, message: String, createdAt: Instant, opensAt: Instant)
+  + getId() : UUID
+  + getTitle() : String
+  + getMessage() : String
+  + getCreatedAt() : Instant
+  + getOpensAt() : Instant
+}
+Capsule "0..*" --> "1" User : owner
+note on link
+  @ManyToOne(fetch = LAZY, optional = false)
+  @JoinColumn(owner_id, nullable = false)
+  Sem remoção em cascata
+end note
+note bottom of User
+  changeDisplayName valida antes de alterar.
+  Nome: 1..120 caracteres após trim.
+  E-mail normalizado e único no banco.
+end note
+note bottom of Capsule
+  Imutável após criação.
+  opensAt > createdAt.
+  Título: 1..120; carta: 1..10000.
+  Disponibilidade calculada: agora >= opensAt.
+end note
+@enduml

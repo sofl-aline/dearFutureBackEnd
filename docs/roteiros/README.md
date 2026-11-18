@@ -2,7 +2,9 @@
 
 Estes arquivos detalham o planejamento em etapas executáveis, com caminhos, código completo, testes e mensagens de commit. A etapa zero será feita por você; depois dela, cada uma das cinco pessoas pode desenvolver sua parte em paralelo.
 
-O código existe nos blocos dos guias. Criar os arquivos nos caminhos indicados ao executar o roteiro. A geração destes documentos não instalou a aplicação no repositório, não fez commits e não enviou alterações ao GitHub.
+A etapa zero já está implementada em `src/` e publicada no repositório. Os blocos dos guias descrevem as funcionalidades seguintes; criar somente os arquivos da sua etapa e preservar a base existente.
+
+Consultar também as [regras de negócio atuais](../REGRAS-DE-NEGOCIO.md) e preservar as entidades existentes ao seguir os roteiros. A alteração de nome é um comportamento do domínio; não exige endpoint nesta entrega.
 
 ## Ordem e divisão
 

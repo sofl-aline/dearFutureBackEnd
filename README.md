@@ -10,6 +10,12 @@ O projeto utiliza arquitetura em camadas, organizada por funcionalidade (`intern
 
 Essa organização atende ao domínio pequeno de cápsulas privadas e permite dividir o trabalho entre cinco integrantes, mantendo uma única aplicação e um banco de dados. Evita a complexidade operacional de múltiplos serviços e deixa claras as responsabilidades de persistência, regras e HTTP.
 
+## Modelagem do domínio
+
+As duas entidades do MVP são `User` e `Capsule`. As [regras de negócio](docs/REGRAS-DE-NEGOCIO.md) definem invariantes, comportamentos e responsabilidades das próximas etapas. O usuário pode alterar seu nome por `changeDisplayName`; cápsulas são imutáveis após a criação.
+
+O [diagrama de classes UML](docs/uml/dominio.puml) está disponível como arquivo de modelagem PlantUML, com atributos, tipos, construtores, métodos e multiplicidades. Pode ser aberto em um visualizador PlantUML ou extensão compatível da IDE.
+
 ## Começar o trabalho da equipe
 
 Após a base estar integrada na `main` do GitHub, cada integrante deve atualizar seu clone, criar sua branch e seguir o respectivo [roteiro](docs/roteiros/README.md). Os arquivos compartilhados da etapa zero já existem e não precisam ser recriados. Cada clone precisa gerar suas próprias chaves antes dos testes.
