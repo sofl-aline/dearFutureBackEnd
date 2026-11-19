@@ -41,6 +41,6 @@ Validações HTTP futuras melhoram mensagens ao usuário, mas não substituem in
 - Um instante antes da liberação resulta em `SEALED`; no instante exato resulta em `AVAILABLE`.
 - Consulta da cápsula de outra conta não encontra resultado, mesmo após o horário de abertura.
 
-## Relação com os roteiros
+## Relação com a implementação
 
-Os roteiros das Pessoas 1 a 5 continuam cobrindo as funcionalidades futuras. O código em `src/` e estas regras representam o domínio atual. Não substituir entidades por versões antigas copiadas de exemplos. Nenhum Controller ou Service funcional é necessário para esta entrega acadêmica.
+O código em `src/` e estas regras representam o domínio atual. Os serviços coordenam autenticação, persistência e transações, preservando as invariantes das entidades.
