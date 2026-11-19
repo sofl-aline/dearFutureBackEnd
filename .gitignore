@@ -13,3 +13,6 @@
 target/
 data/
 secrets/
+
+# Roteiros pessoais de implementação
+/docs/roteiros/

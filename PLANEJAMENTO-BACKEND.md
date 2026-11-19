@@ -1,6 +1,6 @@
 # DearFuture — planejamento e divisão do backend
 
-**Roteiros de implementação:** [índice com etapa zero e cinco partes](docs/roteiros/README.md). Você fará toda a etapa zero; os integrantes começam suas funcionalidades após essa base. Os roteiros incluem código completo, testes e comandos para cada commit.
+Este documento registra o planejamento, os contratos e a divisão de responsabilidades do backend. Os integrantes começam suas funcionalidades após a integração da base comum.
 
 ## 1. Resultado da análise
 
@@ -306,7 +306,7 @@ A dependência inevitável é uma **base comum inicial**. Depois dela, cada pess
 
 ### Etapa zero — contrato e base mínima
 
-Você executará toda a preparação inicial usando o [guia da etapa zero](docs/roteiros/ETAPA-ZERO.md). Essa entrega concentra os arquivos compartilhados em um PR, com build, migrações e segurança funcionando. Os cinco integrantes não precisam entregar partes da base antes de começar suas funcionalidades.
+A preparação inicial é feita antes do desenvolvimento das funcionalidades. Essa entrega concentra os arquivos compartilhados em um PR, com build, migrações e segurança funcionando. Os cinco integrantes não precisam entregar partes da base antes de começar suas funcionalidades.
 
 | Entrega feita por você | Conteúdo |
 | --- | --- |
@@ -562,6 +562,6 @@ A entrega continua sendo um planejamento: nenhum endpoint ou mecanismo de login 
 
 ## 15. Sequência operacional dos commits
 
-O [índice dos roteiros](docs/roteiros/README.md) define os arquivos e o código completo de cada etapa. São 12 commits sugeridos de implementação: um da base, dois de cada uma das Pessoas 1 a 4 e três da Pessoa 5. O terceiro da Pessoa 5 é o teste integrado e aguarda todos; os demais dependem somente da base e da sequência interna do próprio responsável.
+A sequência proposta organiza entregas independentes e verificáveis. São 12 commits sugeridos de implementação: um da base, dois de cada uma das Pessoas 1 a 4 e três da Pessoa 5. O terceiro da Pessoa 5 é o teste integrado e aguarda todos; os demais dependem somente da base e da sequência interna do próprio responsável.
 
-A distribuição aqui descrita é por responsabilidade de manutenção. A primeira criação dos arquivos compartilhados fica toda com você. Os roteiros cobrem o backend; telas React e cliente HTTP futuro não entram nesses 12 commits e continuam como etapa posterior no outro repositório.
+A distribuição aqui descrita é por responsabilidade de manutenção. A primeira criação dos arquivos compartilhados fica toda com você. As entregas cobrem o backend; telas React e cliente HTTP futuro não entram nesses 12 commits e continuam como etapa posterior no outro repositório.

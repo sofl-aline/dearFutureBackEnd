@@ -4,9 +4,9 @@ API de cápsulas do tempo privadas por usuário. Frontend: [dearFuture](https://
 
 ## Status e arquitetura
 
-Etapa implementada: entidades `User` e `Capsule`, repositories JPA, migrações Flyway, resumo de cápsulas, política temporal e configuração de segurança JWT/CORS. Os Controllers e Services funcionais serão implementados posteriormente.
+Etapa implementada: entidades `User` e `Capsule`, repositories JPA, migrações Flyway, resumo de cápsulas, política temporal e configuração de segurança JWT/CORS. Cadastro, login e consulta do usuário autenticado também estão implementados, com serviços, controller e testes. Os endpoints de cápsulas serão implementados nas próximas etapas.
 
-O projeto utiliza arquitetura em camadas, organizada por funcionalidade (`internal/auth` e `internal/capsule`). Cada funcionalidade separa entidades, repositories, DTOs e, nas próximas etapas, services e controllers. Configurações ficam em `config` e exceções comuns em `shared/exception`.
+O projeto utiliza arquitetura em camadas, organizada por funcionalidade (`internal/auth` e `internal/capsule`). Cada funcionalidade separa entidades, repositories, DTOs services e controllers. Configurações ficam em `config` e exceções comuns em `shared/exception`.
 
 Essa organização atende ao domínio pequeno de cápsulas privadas, mantendo uma única aplicação e um banco de dados. Evita a complexidade operacional de múltiplos serviços e deixa claras as responsabilidades de persistência, regras e HTTP.
 
@@ -61,7 +61,7 @@ Testes locais também exigem executar o script de chaves. O CI gera chaves desca
 
 ## Autenticação e privacidade
 
-Cadastro, login e endpoints entram nos PRs de funcionalidades após a base.
+Endpoints de autenticação disponíveis: `POST /api/v1/auth/register`, `POST /api/v1/auth/login` e `GET /api/v1/auth/me`.
 Todas as rotas de cápsulas exigem Bearer JWT. A base já bloqueia acesso anônimo.
 Tokens duram 15 minutos, sem refresh token. O frontend deve manter token somente em memória.
 Logout no frontend descarta token e dados; token previamente copiado permanece válido até expirar.
