@@ -79,5 +79,5 @@ A demonstração local não deve ser publicada sem HTTPS e controles adicionais 
 - José Vasconcelos de Carvalho Neto
 - Rafaella Porto
 - Romulo Frade Cardoso Fernandes
-- 
+
 Cada integrante trabalha em branch própria, com commits individuais e PRs revisados.
