@@ -14,7 +14,9 @@ Essa organização atende ao domínio pequeno de cápsulas privadas e permite di
 
 As duas entidades do MVP são `User` e `Capsule`. As [regras de negócio](docs/REGRAS-DE-NEGOCIO.md) definem invariantes, comportamentos e responsabilidades das próximas etapas. O usuário pode alterar seu nome por `changeDisplayName`; cápsulas são imutáveis após a criação.
 
-O [diagrama de classes UML](docs/uml/dominio.puml) está disponível como arquivo de modelagem PlantUML, com atributos, tipos, construtores, métodos e multiplicidades. Pode ser aberto em um visualizador PlantUML ou extensão compatível da IDE.
+O diagrama apresenta atributos, tipos, construtores, métodos e multiplicidades. O [arquivo editável PlantUML](docs/uml/dominio.puml) também está disponível no repositório.
+
+![Diagrama de classes UML do DearFuture](docs/uml/dominio.png)
 
 ## Começar o trabalho da equipe
 
