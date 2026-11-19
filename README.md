@@ -4,11 +4,11 @@ API de cápsulas do tempo privadas por usuário. Frontend: [dearFuture](https://
 
 ## Status e arquitetura
 
-Etapa zero implementada: entidades `User` e `Capsule`, repositories JPA, migrações Flyway, resumo de cápsulas, política temporal e configuração de segurança JWT/CORS. Os Controllers e Services funcionais serão implementados pelos integrantes nos próximos roteiros.
+Etapa implementada: entidades `User` e `Capsule`, repositories JPA, migrações Flyway, resumo de cápsulas, política temporal e configuração de segurança JWT/CORS. Os Controllers e Services funcionais serão implementados posteriormente.
 
 O projeto utiliza arquitetura em camadas, organizada por funcionalidade (`internal/auth` e `internal/capsule`). Cada funcionalidade separa entidades, repositories, DTOs e, nas próximas etapas, services e controllers. Configurações ficam em `config` e exceções comuns em `shared/exception`.
 
-Essa organização atende ao domínio pequeno de cápsulas privadas e permite dividir o trabalho entre cinco integrantes, mantendo uma única aplicação e um banco de dados. Evita a complexidade operacional de múltiplos serviços e deixa claras as responsabilidades de persistência, regras e HTTP.
+Essa organização atende ao domínio pequeno de cápsulas privadas, mantendo uma única aplicação e um banco de dados. Evita a complexidade operacional de múltiplos serviços e deixa claras as responsabilidades de persistência, regras e HTTP.
 
 ## Modelagem do domínio
 
@@ -17,10 +17,6 @@ As duas entidades do MVP são `User` e `Capsule`. As [regras de negócio](docs/R
 O diagrama apresenta atributos, tipos, construtores, métodos e multiplicidades. O [arquivo editável PlantUML](docs/uml/dominio.puml) também está disponível no repositório.
 
 ![Diagrama de classes UML do DearFuture](docs/uml/dominio.png)
-
-## Começar o trabalho da equipe
-
-Após a base estar integrada na `main` do GitHub, cada integrante deve atualizar seu clone, criar sua branch e seguir o respectivo [roteiro](docs/roteiros/README.md). Os arquivos compartilhados da etapa zero já existem e não precisam ser recriados. Cada clone precisa gerar suas próprias chaves antes dos testes.
 
 ## Executar
 
@@ -72,11 +68,16 @@ Logout no frontend descarta token e dados; token previamente copiado permanece v
 Sem recuperação de senha, administração ou compartilhamento no MVP.
 A carta só é liberada ao proprietário no instante de abertura ou depois dele.
 
-O contrato completo será publicado em `docs/api.md` pela Pessoa 5.
+O contrato completo será publicado em `docs/api.md` .
 A validação deve incluir duas contas e chamada direta à API, além da interface.
 A demonstração local não deve ser publicada sem HTTPS e controles adicionais de acesso/login.
 
 ## Equipe
 
-Preencher os cinco nomes completos e logins antes da entrega.
+- Aline Silva Oliveira de Figueiredo Lima
+- Mateus Cavalcante de Lima
+- José Vasconcelos de Carvalho Neto
+- Rafaella Porto
+- Romulo Frade Cardoso Fernandes
+- 
 Cada integrante trabalha em branch própria, com commits individuais e PRs revisados.
