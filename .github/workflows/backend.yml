@@ -1,0 +1,21 @@
+name: Backend
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Gerar chaves descartáveis de teste
+        run: sh scripts/generate-keys.sh
+      - name: Verificar
+        run: ./mvnw -B verify
